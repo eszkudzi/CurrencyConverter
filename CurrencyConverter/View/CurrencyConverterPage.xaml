@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurrencyConverter.View.CurrencyConverterPage"
+             Title="CurrencyConverterPage">
+
+    <VerticalStackLayout Spacing="10"
+                         Margin="20">
+
+        <Label Text="Amount:"/>
+
+        <Entry x:Name="EntryAmount"
+               FontSize="Medium"
+               Keyboard="Numeric"/>
+
+        <Label Text="From:"/>
+
+        <Picker x:Name="PickerFrom"
+                FontSize="Medium"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedIndexChanged="PickerFrom_SelectedIndexChanged"/>
+
+        <Label Text="To:" />
+
+        <Picker x:Name="PickerTo"
+                FontSize="Medium"
+                ItemDisplayBinding="{Binding Name}" 
+                SelectedIndexChanged="PickerTo_SelectedIndexChanged"/>
+
+        <Button Text="Convert using API"
+                Margin="0,30,0,0"
+                Padding="20"
+                FontSize="Large"
+                BackgroundColor="#2667cf"
+                Clicked="Button_Clicked"/>
+
+        <Button Text="Convert using only code"
+                Margin="0,30,0,0"
+                Padding="20"
+                FontSize="Large"
+                BackgroundColor="#2667cf"/>
+
+        <Label x:Name="LabelResult"
+               FontSize="Large"
+               HorizontalOptions="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,12 +1,14 @@
-﻿namespace CurrencyConverter;
+﻿using CurrencyConverter.View;
+
+namespace CurrencyConverter;
 
 public partial class App : Application
 {
 	public App()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
 
-		MainPage = new AppShell();
+		MainPage = new CurrencyConverterPage();
 	}
 }
 
