@@ -1,10 +1,11 @@
 ﻿using Newtonsoft.Json;
+using CurrencyConverter.ViewModel;
 
 namespace CurrencyConverter.View;
 
 public partial class CurrencyConverterPage : ContentPage
 {
-    private string currencyFrom;
+   private string currencyFrom;
     private string currencyTo;
     List<Currency> CurrencyList = new List<Currency>()
     {
@@ -24,18 +25,19 @@ public partial class CurrencyConverterPage : ContentPage
     public CurrencyConverterPage()
     {
         InitializeComponent();
+        BindingContext = new CurrencyConverterPageViewModel();
         PickerFrom.ItemsSource = CurrencyList;
         PickerTo.ItemsSource = CurrencyList;
     }
 
-    private async void Button_Clicked(object sender, EventArgs e)
+    /*private async void Button_Clicked(object sender, EventArgs e)
     {
         var httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Add("apikey", "UmIMzIdnI0Sls0dp3wSMWwEXFiBc7z0E");
         var response = await httpClient.GetStringAsync($"https://api.apilayer.com/exchangerates_data/convert?to={currencyTo}&from={currencyFrom}&amount={EntryAmount.Text}");
         var currencyresult = JsonConvert.DeserializeObject<Root>(response);
         LabelResult.Text = Math.Round(currencyresult.Result, 2) + currencyTo;
-    }
+    }*/
 
     private void PickerFrom_SelectedIndexChanged(object sender, EventArgs e)
     {
