@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:CurrencyConverter.ViewModel"x:DataType="viewmodel:CurrencyConverterPageViewModel"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:CurrencyConverter.ViewModel"
+             x:DataType="viewmodel:CurrencyConverterPageViewModel"
              x:Class="CurrencyConverter.View.CurrencyConverterPage"
              Title="CurrencyConverterPage">
-
-    <VerticalStackLayout Spacing="10"
-                         Margin="20">
-
+    <VerticalStackLayout Spacing="10" Margin="20">
         <Label Text="Amount:"/>
 
         <Entry x:Name="EntryAmount"
@@ -19,13 +17,15 @@
         <Picker x:Name="PickerFrom"
                 FontSize="Medium"
                 ItemDisplayBinding="{Binding Name}"
+                ItemsSource="{Binding CurrencyList}"
                 SelectedIndexChanged="PickerFrom_SelectedIndexChanged"/>
 
         <Label Text="To:" />
 
         <Picker x:Name="PickerTo"
                 FontSize="Medium"
-                ItemDisplayBinding="{Binding Name}" 
+                ItemDisplayBinding="{Binding Name}"
+                ItemsSource="{Binding CurrencyList}"
                 SelectedIndexChanged="PickerTo_SelectedIndexChanged"/>
 
         <Button Text="Convert using API"
