@@ -119,7 +119,7 @@ namespace CurrencyConverter.ViewModel
             }
         }
 
-        public void PickerFrom_SelectedIndexChanged(Currency selectedItem)
+       public void PickerFrom_SelectedIndexChanged(Currency selectedItem)
         {
             SelectedCurrencyFrom = selectedItem;
         }
