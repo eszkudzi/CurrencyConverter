@@ -64,18 +64,21 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="xunit" Version="2.6.4" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Service\" />
 	  <None Remove="ViewModel\" />
 	  <None Remove="View\" />
 	  <None Remove="Model.DTO\" />
+	  <None Remove="Keys\" />
+	  <None Remove="Services\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Service\" />
 	  <Folder Include="ViewModel\" />
 	  <Folder Include="View\" />
 	  <Folder Include="Model.DTO\" />
+	  <Folder Include="Keys\" />
+	  <Folder Include="Services\" />
 	</ItemGroup>
 </Project>

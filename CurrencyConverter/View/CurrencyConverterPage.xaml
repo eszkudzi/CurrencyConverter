@@ -18,7 +18,7 @@
                 FontSize="Medium"
                 ItemDisplayBinding="{Binding Name}"
                 ItemsSource="{Binding CurrencyList}"
-                SelectedIndexChanged="PickerFrom_SelectedIndexChanged"/>
+                SelectedItem="{Binding SelectedCurrencyFrom}"/>
 
         <Label Text="To:" />
 
@@ -26,7 +26,7 @@
                 FontSize="Medium"
                 ItemDisplayBinding="{Binding Name}"
                 ItemsSource="{Binding CurrencyList}"
-                SelectedIndexChanged="PickerTo_SelectedIndexChanged"/>
+                SelectedItem="{Binding SelectedCurrencyTo}"/>
 
         <Button Text="Convert using API"
                 Margin="0,30,0,0"
