@@ -22,4 +22,7 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CurrencyConverter\CurrencyConverter.csproj" />
+  </ItemGroup>
 </Project>

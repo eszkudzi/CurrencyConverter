@@ -1,7 +1,6 @@
-﻿using System;
-namespace CurrencyConverter
+﻿namespace CurrencyConverter
 {
-	public class Currency
+    public class Currency
 	{
 		public string Name { get; set; }
         public string Code { get; set; }

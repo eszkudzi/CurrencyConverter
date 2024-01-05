@@ -7,9 +7,9 @@ namespace CurrencyConverter.Services
 		{
 		}
 
-        public double ChangeCurrency(double fromCurrency, double toCurrency, double rate)
+        public double ChangeCurrency(double fromCurrency, double toCurrency)
         {
-			toCurrency = fromCurrency * rate;
+			//toCurrency = fromCurrency * rate;
 			return toCurrency;
         }
     }

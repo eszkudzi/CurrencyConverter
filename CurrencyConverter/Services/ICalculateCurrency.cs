@@ -3,7 +3,7 @@ namespace CurrencyConverter.Services
 {
 	public interface ICalculateCurrency
 	{
-		public double ChangeCurrency(double fromCurrency, double toCurrency);
+		public double ChangeCurrency(string fromCurrency, string toCurrency);
 	}
 }
 
