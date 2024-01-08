@@ -64,7 +64,8 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="xunit" Version="2.6.4" />
+		<PackageReference Include="xunit" Version="2.6.5" />
+		<PackageReference Include="Xunit.StaFact" Version="1.1.11" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -80,5 +81,11 @@
 	  <Folder Include="Model.DTO\" />
 	  <Folder Include="Keys\" />
 	  <Folder Include="Services\" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+	  <PackageReference Include="xunit.runner.devices" Version="2.5.25" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0-maccatalyst'">
+	  <PackageReference Include="xunit.runner.devices" Version="2.5.25" />
 	</ItemGroup>
 </Project>

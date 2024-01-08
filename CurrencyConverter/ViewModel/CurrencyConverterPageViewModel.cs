@@ -25,6 +25,8 @@ namespace CurrencyConverter.ViewModel
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        CalculateCurrency calculateCurrency = new CalculateCurrency();
+
         public List<Currency> CurrencyList
         {
             get => currencyList;
@@ -80,9 +82,9 @@ namespace CurrencyConverter.ViewModel
 
         public ICommand ButtonClickedCommand => buttonClickedCommand ??= new Command(ButtonClicked);
 
-        private void ButtonClicked()
+        private void ButtonClicked(object obj)
         {
-            //CalculateCurrency.ChangeCurrency(SelectedCurrencyTo.Rate, SelectedCurrencyFrom.Rate);
+            LabelResult = calculateCurrency.ChangeCurrency(SelectedCurrencyFrom.Code, SelectedCurrencyTo.Code, EntryAmount) + " " + SelectedCurrencyTo.Code;
         }
 
 
